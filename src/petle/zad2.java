@@ -2,25 +2,26 @@ package petle;
 
 import java.util.Scanner;
 
-public class zad1 {
+public class zad2 {
     public static void main(String[] args) {
         boolean twierdzenie =true;
         Scanner scan = new Scanner(System.in);
-        int liczba;
+        char znak;
 
         while (twierdzenie) {
 
-            System.out.println("Podaj liczbę 10-24");
-            liczba= scan.nextInt();
+            System.out.println("Podaj znak T,t,N,n");
+            String pobrac=scan.nextLine();
+            znak = pobrac.charAt(0);
 
-            if(liczba>10||liczba<24) {
+            if(znak=='T'||znak=='t' ||znak=='N'||znak=='n') {
                 twierdzenie = true;
             }else {
                 twierdzenie = false;
 
             }
 
-            System.out.println("Podałeś "+ liczba);
+            System.out.println("Podałeś "+ znak);
 
 
         }
